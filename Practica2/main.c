@@ -69,9 +69,6 @@ int main(void)
 			}
 		}
 	}
-	
-	free(pot);													// If somehow while-loop is forced to break, the program stops memory is cleared
-	free(poti);
 }																// Program being interrupted by ISR
 
 ISR(ADC_vect) {

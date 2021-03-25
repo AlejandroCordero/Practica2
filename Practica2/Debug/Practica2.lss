@@ -449,9 +449,9 @@ int main(void)
 
 0000027c <__vector_29>:
  27c:	1f 92       	push	r1
-	
-	free(pot);													// If somehow while-loop is forced to break, the program stops memory is cleared
-	free(poti);
+			}
+		}
+	}
 }																// Program being interrupted by ISR
 
 ISR(ADC_vect) {

@@ -18,9 +18,8 @@ unsigned int adc_value;
 // Global variables
 
 void ADC_Init() {
-	ADMUX=(1<<REFS1);											 // Selecting internal reference voltage (1.1V)
+	ADMUX=(1<<REFS0)|(1<<1);									 // Selecting AVCC reference (5V) and channel A0 as analog input
 	ADCSRA=(1<<ADIE)|(1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0); // Enable ADC also set Prescaler as 128 and AD interruptions are enabled
-	ADMUX=0x40;													 // Channel A0 selected
 	ADCSRA|=(1<<ADSC);											 // ADSC is set to 1 to start next conversion
 }
 
